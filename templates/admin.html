@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,4 +53,60 @@
 </table>
 
 </body>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+
+<a href="/logout">Logout</a> |
+<a href="/">Home</a>
+
+<h2>Admin Dashboard</h2>
+<h3>Total Requests: {{ total }}</h3>
+<h3>High Priority: {{ high }}</h3>
+<h3>Resolved: {{ resolved }}</h3>
+
+<a href="/logout">Logout</a> |
+<a href="/">Home</a>
+
+<br><br>
+<table border="1">
+<tr>
+<th>ID</th>
+<th>Email</th>
+<th>Message</th>
+<th>Priority</th>
+<th>Status</th>
+<th>Reply</th>
+</tr>
+
+{% for r in data %}
+<tr>
+<td>{{ r[0] }}</td>
+<td>{{ r[1] }}</td>
+<td>{{ r[2] }}</td>
+<td style="color:
+{% if r[3].startswith('High') %}red
+{% elif r[3].startswith('Medium') %}orange
+{% else %}green
+{% endif %}">
+{{ r[3] }}</td>
+<td style="color:green">{{ r[4] }}</td>
+
+<td>
+<form method="post" action="/reply/{{ r[0] }}">
+<input name="reply">
+<button>Send</button>
+</form>
+</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+>>>>>>> 3298548b5044960ecbf3575c55dc40b53543c417
 </html>

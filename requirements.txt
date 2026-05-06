@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 flask
 textblob
+=======
+flask
+textblob
+>>>>>>> 3298548b5044960ecbf3575c55dc40b53543c417
 gunicorn
