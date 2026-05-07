@@ -39,8 +39,8 @@ def get_priority(text):
 
 # ---------------- EMAIL ----------------
 def send_email(to_email, reply_msg):
-    sender = "yourgmail@gmail.com"      # 👈 replace
-    password = "your_app_password"      # 👈 replace (App Password)
+    sender = "yourgmail@gmail.com"      
+    password = "your_app_password"    
 
     msg = MIMEText(reply_msg)
     msg['Subject'] = "Certificate Request Update"
@@ -234,8 +234,8 @@ def get_priority(text):
 
 # ---------------- EMAIL ----------------
 def send_email(to_email, reply_msg):
-    sender = "yourgmail@gmail.com"      # 👈 replace
-    password = "your_app_password"      # 👈 replace (App Password)
+    sender = "yourgmail@gmail.com"      
+    password = "your_app_password"    
 
     msg = MIMEText(reply_msg)
     msg['Subject'] = "Certificate Request Update"
